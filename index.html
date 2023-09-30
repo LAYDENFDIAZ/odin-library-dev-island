@@ -5,25 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="">
-    <h1 class="text-cyan-500">hello</h1>
-    <form action="">
-      <div class="input-container">
-        <input type="text" />
+    <form
+      action=""
+      class="flex space-x-3 bg-slate-200 justify-center m-auto py-24"
+    >
+      <div
+        class="flex input-container justify-center w-fit rounded-lg border border-solid border-gray-600"
+      >
+        <input
+          class="rounded-lg placeholder:text-gray-600 pl-4"
+          type="text"
+          placeholder="author"
+        />
       </div>
-      <div class="input-container">
-        <input type="text" />
+      <div
+        class="flex input-container justify-center w-fit rounded-lg border border-solid border-gray-600"
+      >
+        <input
+          class="rounded-lg placeholder:text-gray-600 pl-4"
+          type="text"
+          placeholder="title"
+        />
       </div>
-      <div class="input-container">
-        <input type="text" />
+      <div
+        class="flex input-container justify-center w-fit rounded-lg border border-solid border-gray-600"
+      >
+        <input
+          class="rounded-lg placeholder:text-gray-600 pl-4"
+          type="text"
+          placeholder="number of pages"
+        />
       </div>
-      <button>ADD BOOK</button>
+      <button
+        type="button"
+        onclick="addBookToLibrary()"
+        class="bg-gray-800 text-white p-3 rounded-lg"
+      >
+        ADD BOOK
+      </button>
     </form>
 
-    <div class="library">
-      <book-item></book-item>
-    </div>
+    <div class="library grid grid-flow-col grid-cols-3"></div>
 
     <script type="module" src="script.js"></script>
     <script type="module" src="book.js"></script>

@@ -10,20 +10,19 @@ const MY_LIBRARY = [];
 //   this.numberOfPages = numberOfPages;
 // }
 
-function addBookToLibrary() {
+function addBookToLibrary(event) {
+  LIBRARY.innerHTML = "";
+  console.log("FADSFDSFDASFADSF");
   const book = new Book("LAYDEN", "ANYTHING", 3);
-  const book2 = new Book("you", "ANYTHING", 3);
-  const book3 = new Book("me", "ANYTHING", 3);
   MY_LIBRARY.push(book, book2, book3);
-  console.log(MY_LIBRARY);
 
+  console.log(MY_LIBRARY);
   book.displayBooks(MY_LIBRARY);
 }
+
+window.addBookToLibrary = addBookToLibrary;
 
 // function displayBooks() {
 //   LIBRARY.innerHTML = "";
 
 // }
-
-addBookToLibrary();
-// displayBooks();

@@ -29,7 +29,7 @@ class Book extends HTMLElement {
       NUMBER_OF_PAGES.textContent = currentBook.numberOfPages;
 
       AUTHOR.classList.add("text-red-800");
-      BOOK.className = "bg-gray-300 mb-9 w-1/4 text-center";
+      BOOK.className = "bg-gray-800 mb-9 w-1/4 ";
 
       BOOK.appendChild(AUTHOR);
       BOOK.appendChild(TITLE);
