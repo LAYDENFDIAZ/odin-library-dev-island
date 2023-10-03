@@ -88,22 +88,27 @@ function displayBooks() {
       : "Mark as Read";
 
     BOOK.className =
-      "flex flex-col h-64 content-evenly justify-evenly bg-gray-500 mb-9 w-64";
+      "book-card bg-gray-100 p-4 rounded-lg shadow-lg mb-4 flex flex-col justify-between";
+
+    REMOVE_BOOK_BTN.className =
+      "neumorphic-btn bg-gray-300 text-gray-800 px-4 py-2 rounded-lg shadow-inner hover:shadow-md";
+    TOGGLE_READ_STATUS_BTN.className =
+      "neumorphic-btn bg-gray-300 text-gray-800 px-4 py-2 rounded-lg shadow-inner hover:shadow-md";
 
     REMOVE_BOOK_BTN.addEventListener("click", () => removeBook(index));
     TOGGLE_READ_STATUS_BTN.addEventListener("click", () =>
       toggleReadStatus(index)
     );
 
-    AUTHOR.className = "text-white";
-    TITLE.className = "text-white";
-    NUMBER_OF_PAGES.className = "text-white";
+    const buttonContainer = document.createElement("div");
+    buttonContainer.className = "flex space-x-2";
+    buttonContainer.appendChild(REMOVE_BOOK_BTN);
+    buttonContainer.appendChild(TOGGLE_READ_STATUS_BTN);
 
     BOOK.appendChild(AUTHOR);
     BOOK.appendChild(TITLE);
     BOOK.appendChild(NUMBER_OF_PAGES);
-    BOOK.appendChild(REMOVE_BOOK_BTN);
-    BOOK.appendChild(TOGGLE_READ_STATUS_BTN);
+    BOOK.appendChild(buttonContainer);
     LIBRARY.appendChild(BOOK);
   });
 }

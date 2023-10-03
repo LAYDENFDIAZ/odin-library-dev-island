@@ -11,42 +11,41 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
-  <body class="">
+  <body
+    class="bg-gray-100 min-h-screen flex flex-col items-center justify-center"
+  >
+    <div class="frosting-border"></div>
+
     <form
       action=""
-      class="flex space-x-3 bg-slate-200 justify-center m-auto py-24"
+      class="flex space-x-3 bg-gray-100 p-4 rounded-lg shadow-md mb-4"
+      style="width: 844px"
     >
-      <div
-        class="flex input-container justify-center w-fit rounded-lg border border-solid border-gray-600"
-      >
+      <div class="flex input-container rounded-lg bg-white shadow-lg p-2">
         <input
-          class="author rounded-lg placeholder:text-gray-600 pl-4"
+          class="author rounded-lg placeholder-gray-600 pl-4 bg-transparent focus:outline-none"
           type="text"
-          placeholder="author"
+          placeholder="Author"
         />
         <div
           class="text-red-500 mb-2 hidden author-error-message error-message"
         ></div>
       </div>
-      <div
-        class="flex input-container justify-center w-fit rounded-lg border border-solid border-gray-600"
-      >
+      <div class="flex input-container rounded-lg bg-white shadow-lg p-2">
         <input
-          class="title rounded-lg placeholder:text-gray-600 pl-4"
+          class="title rounded-lg placeholder-gray-600 pl-4 bg-transparent focus:outline-none"
           type="text"
-          placeholder="title"
+          placeholder="Title"
         />
         <div
           class="text-red-500 mb-2 hidden title-error-message error-message"
         ></div>
       </div>
-      <div
-        class="flex input-container justify-center w-fit rounded-lg border border-solid border-gray-600"
-      >
+      <div class="flex input-container rounded-lg bg-white shadow-lg p-2">
         <input
-          class="numOfPages rounded-lg placeholder:text-gray-600 pl-4"
+          class="numOfPages rounded-lg placeholder-gray-600 pl-4 bg-transparent focus:outline-none"
           type="text"
-          placeholder="number of pages"
+          placeholder="Number of Pages"
         />
         <div
           class="text-red-500 mb-2 hidden numOfPages-error-message error-message"
@@ -54,7 +53,7 @@
       </div>
       <button
         type="button"
-        class="createBookBtn bg-gray-800 text-white p-3 rounded-lg"
+        class="createBookBtn bg-gray-800 text-white px-4 py-2 rounded-lg shadow-xl hover:shadow-md"
       >
         ADD BOOK
       </button>
@@ -62,9 +61,7 @@
 
     <div class="error-message-container text-red-500 mb-2"></div>
 
-    <div
-      class="library place-items-center grid grid-cols-3 grid-flow-row"
-    ></div>
+    <div class="library grid grid-cols-3 gap-4"></div>
 
     <script type="module" src="script.js"></script>
     <script type="module" src="book.js"></script>
